@@ -38,6 +38,10 @@ def match(color):
 # ask the user for a hex code
 hex = input("Enter a hex code: #")
 
+# if the input starts with a #, remove it
+if hex[0] == '#':
+    hex = hex[1:]
+
 # match the hex to the closest 256 color
 color = match(hex)
 
