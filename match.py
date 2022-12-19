@@ -44,7 +44,7 @@ if hex_code[0] == '#':
     hex_code = hex_code[1:]
 
 # match the hex to the closest 256 color
-color = match(hex)
+color = match(hex_code)
 
 # print the result
 print("The closest 256 color is: " + str(color))
