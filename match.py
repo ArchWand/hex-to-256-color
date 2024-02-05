@@ -36,15 +36,63 @@ def match(color_to_match):
 
     return closest
 
-# ask the user for a hex code
-hex_code = input("Enter a hex code: #")
+#  Rosewater 	#f5e0dc
+#  Flamingo 	#f2cdcd
+#  Pink 	#f5c2e7
+#  Mauve 	#cba6f7
+#  Red 	#f38ba8
+#  Maroon 	#eba0ac
+#  Peach 	#fab387
+#  Yellow 	#f9e2af
+#  Green 	#a6e3a1
+#  Teal 	#94e2d5
+#  Sky 	#89dceb
+#  Sapphire 	#74c7ec
+#  Blue 	#89b4fa
+#  Lavender 	#b4befe
+#  Text 	#cdd6f4
+#  Subtext1 	#bac2de
+#  Subtext0 	#a6adc8
+#  Overlay2 	#9399b2
+#  Overlay1 	#7f849c
+#  Overlay0 	#6c7086
+#  Surface2 	#585b70
+#  Surface1 	#45475a
+#  Surface0 	#313244
+#  Base 	#1e1e2e
+#  Mantle 	#181825
+#  Crust 	#11111b
 
-# if the input starts with a #, remove it
-if hex_code[0] == '#':
-    hex_code = hex_code[1:]
+# make map of name and tuple (hex string, int)
+cols = {
+  'Rosewater': 'f5e0dc',
+  'Flamingo': 'f2cdcd',
+  'Pink': 'f5c2e7',
+  'Mauve': 'cba6f7',
+  'Red': 'f38ba8',
+  'Maroon': 'eba0ac',
+  'Peach': 'fab387',
+  'Yellow': 'f9e2af',
+  'Green': 'a6e3a1',
+  'Teal': '94e2d5',
+  'Sky': '89dceb',
+  'Sapphire': '74c7ec',
+  'Blue': '89b4fa',
+  'Lavender': 'b4befe',
+  'Text': 'cdd6f4',
+  'Subtext1': 'bac2de',
+  'Subtext0': 'a6adc8',
+  'Overlay2': '9399b2',
+  'Overlay1': '7f849c',
+  'Overlay0': '6c7086',
+  'Surface2': '585b70',
+  'Surface1': '45475a',
+  'Surface0': '313244',
+  'Base': '1e1e2e',
+  'Mantle': '181825',
+  'Crust': '11111b'
+}
 
-# match the hex to the closest 256 color
-color = match(hex_code)
+for color, code in cols.items():
+  print(f'{color} is closest to {match(code)}')
 
-# print the result
-print("The closest 256 color is: " + str(color))
